@@ -1,0 +1,64 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import { Image } from 'astro:assets';
+import logo from '../../public/images/logo.png';
+---
+
+<Layout title="Code Chaudron">
+
+  <main
+    class="min-h-screen flex items-center justify-center px-6 pt-10"
+  >
+
+    <section
+      class="text-center max-w-5xl"
+    >
+
+      <h1
+        class="text-7xl md:text-6xl font-bold tracking-tight text-green-500 leading-none"
+      >
+        Code Chaudron
+      </h1>
+
+      <p
+        class="mt-10 text-xl md:text-2xl text-zinc-200 font-light"
+      >
+        Infrastructure, automation & self-hosting experiments.
+      </p>
+
+      <p
+        class="mt-10 text-xl text-zinc-500 max-w-3xl mx-auto leading-relaxed"
+        class="mt-8 text-lg text-zinc-500 max-w-2xl mx-auto leading-relaxed"
+      >
+        Suivez mon apprentissage autour du DevOps,
+        de l’automatisation et des infrastructures modernes.
+      </p>
+
+      <div
+        class="mt-14 flex items-center justify-center gap-6 flex-wrap"
+      >
+
+        <a
+          href="https://github.com"
+          target="_blank"
+          class="px-8 py-4 rounded-2xl bg-green-500 text-black text-xl font-semibold hover:bg-green-400 transition-all duration-200"
+        >
+          GitHub
+        </a>
+
+        <a
+          href="/roadmap"
+          class="px-8 py-4 rounded-2xl border border-zinc-700 text-zinc-200 text-xl hover:border-green-500 hover:text-green-400 transition-all duration-200"
+        >
+          Voir la roadmap
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</Layout>
+

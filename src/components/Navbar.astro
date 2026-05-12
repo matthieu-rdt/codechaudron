@@ -1,0 +1,69 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../../public/images/logo.png';
+---
+
+<header
+  class="fixed top-0 left-0 w-full z-50 border-b border-zinc-900/80 backdrop-blur-md bg-[#0b0f10]/70"
+>
+  <nav
+    class="max-w-7xl mx-auto px-8 py-5 flex items-center justify-between"
+  >
+
+    <a
+      href="/"
+      class="flex items-center"
+    >
+
+      <span
+        class="text-green-500 font-semibold text-2xl tracking-tight"
+      >
+        Code Chaudron
+      </span>
+
+    </a>
+
+    <div
+      class="hidden md:flex items-center gap-10 text-lg"
+    >
+
+      <a
+        href="/stack"
+        class="text-zinc-300 hover:text-green-400 transition-colors duration-200"
+      >
+        Stack
+      </a>
+
+      <a
+        href="/roadmap"
+        class="text-zinc-300 hover:text-green-400 transition-colors duration-200"
+      >
+        Roadmap
+      </a>
+
+      <a
+        href="/services"
+        class="text-zinc-300 hover:text-green-400 transition-colors duration-200"
+      >
+        Services
+      </a>
+
+      <a
+        href="/veille"
+        class="text-zinc-300 hover:text-green-400 transition-colors duration-200"
+      >
+        Veille
+      </a>
+
+      <a
+        href="https://github.com"
+        target="_blank"
+        class="text-zinc-300 hover:text-green-400 transition-colors duration-200"
+      >
+        GitHub
+      </a>
+
+    </div>
+
+  </nav>
+</header>
