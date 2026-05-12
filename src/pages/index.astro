@@ -1,22 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
-import { Image } from 'astro:assets';
-import logo from '../../public/images/logo.png';
+import StackCard from '../components/StackCard.astro';
+import InfraCard from '../components/InfraCard.astro';
 ---
 
 <Layout title="Code Chaudron">
 
-  <main
-    class="min-h-screen flex items-center justify-center px-6 pt-10"
-  >
+  <main>
 
     <section
-      class="text-center max-w-5xl"
+      class="min-h-screen flex flex-col items-center justify-center px-6 pt-10 text-center max-w-5xl mx-auto"
     >
 
       <h1
-        class="text-7xl md:text-6xl font-bold tracking-tight text-green-500 leading-none"
+        class="text-5xl md:text-7xl font-bold tracking-tight text-green-500 leading-none"
       >
         Code Chaudron
       </h1>
@@ -28,7 +25,6 @@ import logo from '../../public/images/logo.png';
       </p>
 
       <p
-        class="mt-10 text-xl text-zinc-500 max-w-3xl mx-auto leading-relaxed"
         class="mt-8 text-lg text-zinc-500 max-w-2xl mx-auto leading-relaxed"
       >
         Suivez mon apprentissage autour du DevOps,
@@ -58,7 +54,120 @@ import logo from '../../public/images/logo.png';
 
     </section>
 
+    <section
+      class="max-w-6xl mx-auto px-6 pb-24"
+    >
+
+      <div
+        class="text-center mb-14"
+      >
+
+        <h2
+          class="text-4xl font-bold text-zinc-100"
+        >
+          Current Stack
+        </h2>
+
+        <p
+          class="mt-4 text-zinc-500 text-lg"
+        >
+          Technologies currently deployed and tested in my infrastructure.
+        </p>
+
+      </div>
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+      >
+
+        <StackCard
+          title="Docker"
+          description="Containerized deployment and service orchestration."
+        />
+
+        <StackCard
+          title="Traefik"
+          description="Reverse proxy with automatic HTTPS and routing."
+        />
+
+        <StackCard
+          title="Ansible"
+          description="Infrastructure automation and configuration management."
+        />
+
+        <StackCard
+          title="WireGuard"
+          description="Secure remote access to private infrastructure."
+        />
+
+        <StackCard
+          title="PostgreSQL"
+          description="Database services for self-hosted applications."
+        />
+
+        <StackCard
+          title="Restic"
+          description="Encrypted backup management and restore workflows."
+        />
+
+      </div>
+
+    </section>
+
+    <section
+      class="max-w-6xl mx-auto px-6 pb-32"
+    >
+
+      <div
+        class="text-center mb-14"
+      >
+
+        <h2
+          class="text-4xl font-bold text-zinc-100"
+        >
+          Infrastructure Overview
+        </h2>
+
+        <p
+          class="mt-4 text-zinc-500 text-lg"
+        >
+          Public and private services currently running in my homelab environment.
+        </p>
+
+      </div>
+
+      <div
+        class="grid grid-cols-1 lg:grid-cols-2 gap-6"
+      >
+
+        <InfraCard
+          title="OVH VPS"
+          type="PUBLIC"
+          description="Main public-facing infrastructure hosting reverse proxy and services."
+        />
+
+        <InfraCard
+          title="Traefik"
+          type="PROXY"
+          description="Automatic HTTPS, routing and secure entrypoint management."
+        />
+
+        <InfraCard
+          title="WireGuard"
+          type="PRIVATE"
+          description="Secure private access to internal administration services."
+        />
+
+        <InfraCard
+          title="Portainer"
+          type="INTERNAL"
+          description="Container management interface protected behind VPN access."
+        />
+
+      </div>
+
+    </section>
+
   </main>
 
 </Layout>
-
