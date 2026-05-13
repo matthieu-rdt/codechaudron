@@ -1,44 +1,55 @@
----
-import { Image } from 'astro:assets';
-import logo from '../../public/images/logo.png';
----
-
 <header
   class="fixed top-0 left-0 w-full z-50 border-b border-zinc-900/80 backdrop-blur-md bg-[#0b0f10]/70"
 >
   <nav
-    class="max-w-7xl mx-auto px-8 py-5 flex items-center justify-between"
+    class="max-w-7xl mx-auto px-8 py-5 flex items-center justify-between gap-8"
   >
 
     <a
       href="/"
-      class="flex items-center"
+      class="flex flex-1 items-center gap-2.5 text-zinc-300 hover:text-green-400 transition-colors duration-200"
+      aria-label="Accueil"
     >
 
-      <span
-        class="text-green-500 font-semibold text-2xl tracking-tight"
+      <svg
+        class="h-5 w-5 shrink-0 text-green-500/80"
+        viewBox="0 0 24 24"
+        fill="none"
+        aria-hidden="true"
       >
-        Code Chaudron
+        <path
+          d="M4.5 10.75 12 4.5l7.5 6.25"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M6.75 10.25v8.25h10.5v-8.25"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+
+      <span
+        class="text-lg font-medium"
+      >
+        Accueil
       </span>
 
     </a>
 
     <div
-      class="hidden md:flex items-center gap-10 text-lg"
+      class="hidden md:flex items-center justify-center gap-10 text-lg"
     >
 
       <a
         href="/stack"
         class="text-zinc-300 hover:text-green-400 transition-colors duration-200"
       >
-        Stack
-      </a>
-
-      <a
-        href="/roadmap"
-        class="text-zinc-300 hover:text-green-400 transition-colors duration-200"
-      >
-        Roadmap
+        Technologies
       </a>
 
       <a
@@ -55,14 +66,26 @@ import logo from '../../public/images/logo.png';
         Veille
       </a>
 
-      <a
-        href="https://github.com"
-        target="_blank"
-        class="text-zinc-300 hover:text-green-400 transition-colors duration-200"
-      >
-        GitHub
-      </a>
+    </div>
 
+    <div
+      class="flex flex-1 items-center justify-end text-sm font-medium tracking-wide text-zinc-500"
+      aria-label="Sélecteur de langue"
+    >
+      <span
+        class="text-green-500/80"
+      >
+        FR
+      </span>
+      <span
+        class="mx-2 text-zinc-700"
+        aria-hidden="true"
+      >
+        |
+      </span>
+      <span>
+        EN
+      </span>
     </div>
 
   </nav>
